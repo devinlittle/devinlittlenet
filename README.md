@@ -1,6 +1,6 @@
 # My site
 
-** This website is in progress **
+* This website is in progress *
 
 To build, have pnpm installed and run
 
@@ -11,4 +11,4 @@ pnpm build
 ```
 
 The site will be in the build. Run `node build` to run the site on `0.0.0.0` with port `3000`.
-To change this you can add an env file more info (here)[https://kit.svelte.dev/docs/adapter-node]
+To change this you can add an env file more info [here](https://kit.svelte.dev/docs/adapter-node)
