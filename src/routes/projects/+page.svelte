@@ -3,7 +3,13 @@
  <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
+<script>
+  import Preview from "$lib/comps/Preview.svelte";
+</script>
+
 <h1>Projects</h1>
 
-<p>gonna add content through markdown later</p>
+<Preview articleLink={"Welcome"}/>
+
+
 <!-->Content Here!</!-->
