@@ -2,6 +2,7 @@
 	"name": "devinlittlenet",
 	"version": "0.0.1",
 	"scripts": {
+    "start:prod": "node -r dotenv/config .",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
