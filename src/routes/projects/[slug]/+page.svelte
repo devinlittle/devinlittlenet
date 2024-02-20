@@ -1,13 +1,16 @@
 <script>
-  export let data;
-  import Welcome from "$lib/comps/Welcome.svelte";
-
+	export let data;
 </script>
- 
 
-<h1>{data.pagedt.slug}</h1>
+<article>
+	<h1>{data.title}</h1>
+	<p class="postDate">Wrote on {data.date}</p>
+	<svelte:component this={data.content}/>
+</article>
 
-{#if data.pagedt.slug === "Welcome"}
-  <Welcome/>
-{/if}
-
+<style>
+  .postDate {
+    font-size: 85%;
+    color: blueviolet;
+  }
+</style>

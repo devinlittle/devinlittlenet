@@ -5,11 +5,17 @@
 
 <script>
   import Preview from "$lib/comps/Preview.svelte";
+  export let data;
 </script>
 
 <h1>Projects</h1>
 
-<Preview articleLink={"Welcome"}/>
-
+{#each data.posts as v}
+  <div>
+    <br>
+      <Preview articleLink={v.path} articleTitle={v.meta.title} articleImage={v.meta.image}/>
+    <br>
+  </div>
+{/each}
 
 <!-->Content Here!</!-->
