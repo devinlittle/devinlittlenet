@@ -1,9 +1,9 @@
+<!-->$lib/comps/Preview.svelte</!-->
+
 <script>
   export let articleLink = "N/A";
   export let articleTitle = "N/A";
   export let articleImage = "n/a";
-
-
 </script>
 
 <article class="articleClass">
@@ -22,8 +22,8 @@
   .articleClass {
     border: 3.2px solid var(--color-bg-1);
     border-radius: 5px;
-    width: 50%;
-    height: 180%;
+    width: 65%;
+    height: 95%;
  
   }
   .articleTitle {

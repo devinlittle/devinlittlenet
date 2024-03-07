@@ -10,12 +10,26 @@
 
 <h1>Projects</h1>
 
-{#each data.posts as v}
-  <div>
-    <br>
-      <Preview articleLink={v.path} articleTitle={v.meta.title} articleImage={v.meta.image}/>
-    <br>
-  </div>
-{/each}
-
+<div class="eachLoop">
+  {#each data.posts as v}
+    <div>
+      <br>
+        <Preview articleLink={v.path} articleTitle={v.meta.title} articleImage={v.meta.image}/>
+      <br>
+    </div>
+  {/each}
+</div>
 <!-->Content Here!</!-->
+
+<style>
+  .eachLoop {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (max-width: 850px) {
+  .eachLoop {
+    flex-direction: column;
+  }
+}
+</style>

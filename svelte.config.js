@@ -12,11 +12,11 @@ export default {
       //preprocess: preprocess({sass: true}),
 		})
 	},
-  extensions: ['.svelte', '.md'],
+  extensions: ['.svelte', '.md', ".svx"],
   preprocess: [
     enhancedImages(),
 		mdsvex({
-			extensions: ['.md']
+			extensions: ['.md', '.svx']
 		})
 	]
 };
