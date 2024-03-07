@@ -8,7 +8,7 @@ To build, have pnpm installed and run
 rm -rf ./build/ # only run if you have built the site before
 pnpm install --frozen-lockfile # installs only the dev deps
 pnpm build # builds the site
-node --env-file=template.env build # runs index.js in the build folder with node using the template.env file for environment variables 
+pnpm run start:prod # runs index.js in the build folder with node using the template.env file for environment variables 
 ```
 
 * The site will be in the build. Run `node build` to run the site on `0.0.0.0` (localhost) with port `8000`.\

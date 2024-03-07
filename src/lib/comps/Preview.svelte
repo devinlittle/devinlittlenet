@@ -14,8 +14,10 @@
       </a>
     </h1>
   </div>
-  <img src="{articleImage}" alt="Article Logo"/>
   <br/>
+  <br/>
+  <hr style="color: blue;"/>
+  <img src="proimgs/{articleImage}" alt="Article Logo"/>
 </article>
 
 <style>
@@ -24,7 +26,6 @@
     border-radius: 5px;
     width: 65%;
     height: 95%;
- 
   }
   .articleTitle {
     width: 100%;
@@ -33,7 +34,7 @@
 
   img {
     width: 50%;
-    display: block;
+    display: grid;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
