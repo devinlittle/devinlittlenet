@@ -1,6 +1,6 @@
 <svelte:head>
  <title>DevinLittle.net - Projects</title> 
- <meta name="description" content="Svelte demo app" />
+ <meta name="description" content="Devin's Projects section" />
 </svelte:head>
 
 <script>
