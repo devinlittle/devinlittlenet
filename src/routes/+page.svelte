@@ -22,9 +22,9 @@
 
    
   function animEnd() {
-    console.log("hello")
     anima = true;
   }
+
   $: anima = false
   $: MenuVis = false;
   let MenuVisTog = () => {MenuVis = !MenuVis}
