@@ -19,7 +19,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/pixthehe/devinlittlenet">
+		<a href="https://github.com/devinlittle/devinlittlenet">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
