@@ -11,7 +11,7 @@
     return roles[PodcastSchoolProjectService] ?? "user";
   }
 
-  let allowed_to_view = $state(true);
+  let allowed_to_view = $state(false);
 
   $effect(() => {
     if (auth.ready) {
@@ -114,51 +114,31 @@
     <main class="panel">
       <h2>Podcast Episodes</h2>
 
-      <div class="tabs">
+      <div class="grid">
         {#each podcast.episodes as ep}
-          <button
-            type="button"
-            class="tab {activeTab === ep.id ? 'active' : ''}"
-            on:click={() => (activeTab = ep.id)}
+          <a
+            href="https://www.youtube.com/watch?v={ep.embedId}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card"
+            style="text-decoration: none; justify-content: space-between;"
           >
-            Ep {ep.id}
-            <span class="count">Audio</span>
-          </button>
-        {/each}
-      </div>
-
-      {#each podcast.episodes as ep}
-        {#if activeTab === ep.id}
-          <div
-            style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;"
-          >
-            <h3 style="color: var(--color-theme-1); margin: 0;">{ep.title}</h3>
-
-            <div
-              style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; border: 1px solid var(--color-border);"
-            >
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/{ep.embedId}"
-                title="YouTube video player"
-                frameborder="0"
-                style="width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--color-border); border-radius: 0.75rem;"
-                allow="accelerometer;
-                autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-                web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+            <div class="card-top">
+              <div class="filename">{ep.title}</div>
+              <span class="badge badge-public">Audio ↗</span>
             </div>
 
-            <p
-              style="font-size: 0.9rem; color: var(--color-subtle-text); line-height: 1.5;"
-            >
-              <strong>Episode Notes:</strong>
-              {ep.notes}
-            </p>
-          </div>
-        {/if}
-      {/each}
+            <div class="meta">
+              <p
+                style="font-size: 0.78rem; color: var(--color-subtle-text); margin: 0; line-height: 1.4;"
+              >
+                {ep.notes}
+              </p>
+            </div>
+            <br />
+          </a>
+        {/each}
+      </div>
     </main>
   </div>
 {:else}
